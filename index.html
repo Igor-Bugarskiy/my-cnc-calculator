@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=o, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="style.css"
+</head>
+<body>
+        <div style="text-align: center; font-family: Arial, sans-serif; padding: 20px;">
+        <h2>Про-Калькулятор ЧПУ: Обороты и Подача</h2>
+        
+        <p>Диаметр детали (D, мм):</p>
+        <input type="number" id="diameter" value="50" style="padding: 10px; font-size: 16px; width: 120px; text-align: center;">
+
+        <p>Скорость резания (Vc, м/мин):</p>
+        <input type="number" id="speed" value="200" style="padding: 10px; font-size: 16px; width: 120px; text-align: center;">
+
+        <!-- НАШЕ НОВОЕ ПОЛЕ: Подача на оборот -->
+        <p>Подача на оборот (fn, мм/об):</p>
+        <input type="number" id="feed-rev" value="0.2" step="0.01" style="padding: 10px; font-size: 16px; width: 120px; text-align: center;">
+
+        <br><br>
+        <button class="btn" style="background-color: #0077b6; color: white; border: none; padding: 12px 30px; font-size: 18px; border-radius: 5px; cursor: pointer;">Рассчитать режимы</button>
+
+        <!-- ДВЕ СТРОКИ РЕЗУЛЬТАТА -->
+        <h3 id="result-rpm" style="color: green; margin-top: 25px;">Обороты: — об/мин</h3>
+        <h3 id="result-feed" style="color: #0077b6;">Минутная подача: — мм/мин</h3>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
